@@ -8,7 +8,7 @@ read -s PASSWORD_LENGTH
 # Use -s option to hide user input (silent mode) for password entry.
 
 # Validate the entered password length to ensure it is a positive integer.
-if [[ ! $PASSWORD_LENGTH =~ ^[0-9]+$ ]]; then
+if ! [[ $PASSWORD_LENGTH =~ ^[0-9]+$ ]]; then
     echo "Invalid input. Please enter a valid positive integer for password length."
     exit 1
 fi
